@@ -36,7 +36,7 @@ def plotView():
     #length=10
     #randomnumber1 = random.sample(range(-20,20),length)
     #randomnumber2 = random.sample(range(10,50),length)
-    korban = pd.read_excel(r'E:\Harddisk\File Gheo\Reliefops\spyder\ReliefWeb\korban.xlsx')
+    korban = pd.read_excel('korban.xlsx')
     fig = Figure()
     #plt.style.use('dark_background')
     axis = fig.add_subplot(1, 1, 1) 
@@ -65,7 +65,7 @@ def plotView():
 #plot banjir
 @app.route('/trialpage/banjir', methods=["GET"])
 def plotbanjir():
-    korban = pd.read_excel(r'E:\Harddisk\File Gheo\Reliefops\spyder\ReliefWeb\korban.xlsx')
+    korban = pd.read_excel('korban.xlsx')
     fig = Figure()
     axis = fig.add_subplot(1, 1, 1) 
     axis.set_title("Kejadian Bencana Banjir di Jawa Barat")
@@ -88,7 +88,7 @@ def plotbanjir():
 #plot longsor
 @app.route('/trialpage/longsor', methods=["GET"])
 def plotlongsor():
-    korban = pd.read_excel(r'E:\Harddisk\File Gheo\Reliefops\spyder\ReliefWeb\korban.xlsx')
+    korban = pd.read_excel('korban.xlsx')
     fig = Figure()
     axis = fig.add_subplot(1, 1, 1) 
     axis.set_title("Kejadian Bencana Longsor di Jawa Barat")
@@ -111,7 +111,7 @@ def plotlongsor():
 #plot gempa
 @app.route('/trialpage/gempa', methods=["GET"])
 def plotgempa():
-    korban = pd.read_excel(r'E:\Harddisk\File Gheo\Reliefops\spyder\ReliefWeb\korban.xlsx')
+    korban = pd.read_excel('korban.xlsx')
     fig = Figure()
     axis = fig.add_subplot(1, 1, 1) 
     axis.set_title("Kejadian Bencana Longsor di Jawa Barat")
@@ -134,7 +134,7 @@ def plotgempa():
 #plot gunung
 @app.route('/trialpage/gunung', methods=["GET"])
 def plotgunung():
-    korban = pd.read_excel(r'E:\Harddisk\File Gheo\Reliefops\spyder\ReliefWeb\korban.xlsx')
+    korban = pd.read_excel('korban.xlsx')
     fig = Figure()
     axis = fig.add_subplot(1, 1, 1) 
     axis.set_title("Kejadian Bencana Letusan Gunung di Jawa Barat")
