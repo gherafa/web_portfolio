@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Relief-OPS</title>
+
+  <!-- Custom fonts for this theme -->
+  <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Theme CSS -->
+  <link href="/static/css/freelancer.min.css" rel="stylesheet">
+</head>
+  
+  <body>
+    {% include 'includes/_navbar.html' %}
+    <div class="container">
+     {% include 'includes/_messages.html' %}
+     {% block body %}{% endblock %}
+    </div>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="/static/vendor/jquery/jquery.min.js"></script>
+    <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="/static/vendor/js/jqBootstrapValidation.js"></script>
+    <script src="/static/vendor/js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="/static/vendor/js/freelancer.min.js"></script>
+    <script type="text/javascript">
+      CKEDITOR. replace('editor')
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <register class="container-fluid">
+  <h1 class="page-section-heading text-center text-uppercase text-primary mb-0">Daftar Dulu</h1>
+  <!-- Icon Divider -->
+      <div class="divider-custom divider-secondary">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+  {% from "includes/_formhelpers.html" import render_field %}
+  <form method="POST" action="">
+    <div class="form-group">
+      {{render_field(form.name, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.email, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.username, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.password, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.confirm, class_="form-control")}}
+    </div>
+    <p>Already Have an Account?<a href="/login">Login Here</a></p>
+    <p><input type="submit" class="btn btn-secondary" value="Submit"></p>
+  </form>
+  </register>
+{% endblock %}

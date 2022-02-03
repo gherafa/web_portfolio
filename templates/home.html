@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+ <header class="masthead bg-transparent text-white text-center">
+  <div class="container d-flex align-items-center flex-column">
+    <h1 class="masthead-heading text-uppercase mb-5 mt-0 text-primary">Welcome</h1>
+    <img class="img-fluid" src="/static/img/relief.svg" alt="">
+    <div>
+    <p></p>
+    </div>
+    
+    <h1 class="masthead-heading text-uppercase mt-5 text-primary">Relief-OpS Web Apps</h1>
+    
+    <!-- Icon Divider -->
+      <div class="divider-custom divider-secondary">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <!-- Masthead Subheading -->
+      <p class="masthead-subheading font-weight-light mb-5 text-secondary">This application is a python web framework to display map and data for disaster risk management in West Java province</p>
+      <div>
+      {% if session.logged_in == NULL %}
+        <a href="/register" class="btn btn-secondary">Join Us?</a>
+        <a href="/login" class ="btn btn-success btn lg">Login</a>
+      {% endif %}
+      <p></p>
+      </div>
+  </div>
+ </header>
+{% endblock %}
+
+data.rename(columns = {'Klasifikas' : 'Klasifikasi'},inplace = True)
+

@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+ <report class = "container-fluid">
+  <h1 class="page-section-heading text-center text-uppercase text-primary mb-0">Disaster Related Report</h1>
+  <!-- Icon Divider -->
+      <div class="divider-custom divider-secondary">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+      </div>
+  <div>
+  <p></p>
+  </div>
+  <ul class="list-group-item">
+    {% for article in articles %}
+      <li class="list-group-item"><a href="article/{{article.id}}">{{article.title}}</a></li>
+    {% endfor %}
+  </ul>
+ </report>
+{% endblock %}

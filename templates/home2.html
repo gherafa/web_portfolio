@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Gheo's Portfolio Web</title>
+
+  <!-- Custom fonts for this theme -->
+  <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Theme CSS -->
+  <link href="/static/css/freelancer.min.css" rel="stylesheet">
+  <link href="/static/css/custom-style.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger text-primary" href="/">My Portfolio</a>
+      <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/">Home</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/overview">Research Overview</a> <!-- CREATE A NEW ROUTES FOR RELIEF-OPS OVERVIEW -->
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/peta">Disaster Risk Map</a>
+            </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/trialpage/plot">Disaster Information</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Masthead -->
+  <header class="masthead bg-primary text-white text-center" >
+    <!--img src="/static/img/bencana.jpg" alt="Lights"-->
+    <div class="container d-flex align-items-center flex-column">
+
+      <!-- Masthead Avatar Image -->
+      <img class="img-fluid" src="/static/img/flask1.png" alt="">
+
+      <!-- Masthead Heading -->
+      <h1 class="masthead-heading text-uppercase mb-0">
+        <p>Welcome To</p>
+        <p>Gheo's Portfolio Web Page</p>
+      </h1>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom divider-secondary">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <!--<div>
+      {% if session.logged_in == NULL %}
+        <a href="/register" class="btn btn-secondary">Join Us?</a>
+        <a href="/login" class ="btn btn-success btn lg">Login</a>
+      {% endif %}
+      <p></p>
+      </div> -->
+      <!-- Masthead Subheading -->
+      <p class="masthead-subheading font-weight-light mb-0">A highlight on the usage of Python programming language to build a web apps</p>
+
+    </div>
+  </header>
+
+  <!-- PORTFOLIO Section -->
+  <section class="page-section portfolio" id="portfolio">
+    <div class="container">
+
+      <!-- Portfolio Section Heading -->
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">About Me<h2>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom divider-secondary">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <!-- Portfolio Grid Items -->
+      <div class="row">
+
+        <!-- Portfolio Item 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="" alt="">
+          </div>
+        </div>
+
+        <!-- Portfolio Item 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+                <br>Click to learn more
+              </div>
+            </div>
+            <img class="img-fluid" src="/static/img/portfolio/foto_std.jpg" alt="">
+          </div>
+          <p class="text-center ml-auto text-black">Awards 
+            <br>& 
+            <br>Contributions
+          </p>
+        </div>
+          
+
+        <!-- Portfolio Item 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="" alt="">
+          </div>
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+  </section>
+  
+  <!-- EXPERIENCES Section -->
+  <section class="page-section bg-secondary text-white mb-0" id="abstract">
+    <div class="container">
+    
+      <!-- Abstract Section Heading -->
+      <h2 class="page-section-heading text-center text-uppercase text-primary">Experiences</h2>
+      <!-- Icon Divider -->
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <h2 class="page-section-subheading text-leftcenter text-uppercase text-primary">Relief-OpS Research Assistant</h2>
+      <p class="page-section-text text-left text-uppercase text-white">Design a Resillient Food Supply Network for Natural Disaster in West Java, led by Southampton University and Padjadjaran University 2019- Present</p>
+      
+      <!-- About Section Content -->
+      <div class="container">
+          <society class="lead">
+            <p class="text-justify ml-auto text-white"><i class="fas fa-star"></i> Gather, process, and prepare data from various types and formats.</p>
+            <p class="text-justify ml-auto text-white"><i class="fas fa-star"></i> Performed analysis and visualization to gain insight from data.</p>
+            <p class="text-justify ml-auto text-white"><i class="fas fa-star"></i> Developed a simulation model on the post-disaster event to predict demand and distribution routes.</p>
+            <p class="text-justify ml-auto text-white"><i class="fas fa-star"></i> Developed a python based GUI as a decision support system on post-disaster management.</p>
+          </society>
+      </div>
+      
+      <!-- Icon Divider -->
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <h2 class="page-section-subheading text-leftcenter text-uppercase text-primary">Project Assistant</h2>
+      <p class="page-section-text text-left text-uppercase text-white">Design Optimalization and Implementation of High Performance Computer in University of Padjadjaran for Nano and Bio-Material Modelling, 2019</p>
+      
+      <!-- About Section Content -->
+      <div class="container">
+        <society class="lead">
+          <p class="text-justify ml-auto text-white"><i class="fas fa-star"></i> Assisted in server and cluster computer maintenance.</p>
+          <p class="text-justify ml-auto text-white"><i class="fas fa-star"></i> Assisted in data processing for modelling silica and alumunium.</p>
+          <p class="text-justify ml-auto text-white"><i class="fas fa-star"></i> Assisted in data editting, interpretation, and analysis.</p>
+        </society>
+      </div>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <h2 class="page-section-subheading text-leftcenter text-uppercase text-primary">Bachelor's Thesis</h2>
+      <p class="page-section-text text-left text-uppercase text-white">Phonon Density of State Study of Fluid Saturated Porous Medium Using Molecular Dynamics, 2019</p>
+      
+      <!-- About Section Content -->
+      <div class="container">
+        <society class="lead">
+          <p class="text-justify ml-auto text-white"><i class="fas fa-star"></i> Created a nano scaled model of water saturated porous silicate material.</p>
+          <p class="text-justify ml-auto text-white"><i class="fas fa-star"></i> Performed a molecular dynamic simulation using LAMMPS.</p>
+          <p class="text-justify ml-auto text-white"><i class="fas fa-star"></i> Managed the simulation and data processing in computer clusters using slurm workload manager.</p>
+        </society>
+      </div>
+
+    </div>
+  </section>
+
+  
+  
+  <!-- SKILLS Section -->
+  <section class="page-section bg-primary text-white mb-0" id="about">
+    <div class="container">
+
+      <!-- About Section Heading -->
+      <h2 class="page-section-heading text-center text-uppercase text-secondary">Skills</h2>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <h2 class="page-section-subheading text-leftcenter text-uppercase text-secondary">Computer Skills</h2>
+
+      <!-- About Section Content -->
+      <div class="container">
+          <society class="lead">
+            <p class="text-justify ml-auto text-secondary"><i class="fas fa-star"></i> &ensp;Python Programming Language &ensp;<i class="fab fa-python"></i></p>
+            <p class="text-justify text-secondary">&emsp; - Able to write both procedural and object-oriented code.</p>
+            <p class="text-justify text-secondary">&emsp; - Able to perform data processing, analysis, simulation, and visualization (including GIS data) using</p>
+            <p class="text-justify text-secondary">&emsp;  &ensp;   pandas, geopandas, numpy, folium, and matplotlib library.</p>
+            <p class="text-justify text-secondary">&emsp; - Able to develop a web application using flask library</p>
+            <p class="text-justify text-secondary">&emsp; - Able to develop a desktop application to perform simulation and visualization using tkinter and pyqt library</p>
+            <p class="text-justify text-secondary">&emsp; - Knowledge in machine learning and deep learning to perform regression and classification from</p>
+            <p class="text-justify text-secondary">&emsp;  &ensp; Kaggle and UCI ML datasets using scikit-learn, keras, and tensorflow library.</p>
+            
+            <p class="text-justify ml-auto text-secondary"><i class="fas fa-star"></i>&ensp;SQL &ensp;<i class="fas fa-database"></i></p>
+            <p class="text-justify text-secondary">&emsp; - Able to use database management system and create a simple CRUD application using Python library.</p>
+            <p class="text-justify ml-auto text-secondary"><i class="fas fa-star"></i>&ensp;Knowledge in using AWK, BASH, Linux OS, and slurm to work on computer clusters.</p>
+            <p class="text-justify ml-auto text-secondary"><i class="fas fa-star"></i>&ensp;Knowledge in using Surfer, MapInfo, QGIS, ARCGIS, and Microsoft Office (Excel, Word, PowerPoint).</p>
+          </society>
+          <!-- Icon Divider -->
+          <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-line"></div>
+          </div>
+      </div>
+      
+      <h2 class="page-section-subheading text-leftcenter text-uppercase text-secondary">Soft Skills</h2>    
+      <div class="container">
+          <society class="lead">
+            <p class="text-justify ml-auto text-secondary"><i class="fas fa-star"></i>&ensp;Leadership</p>
+            <p class="text-justify text-secondary">&emsp; - Able to lead and manage the team in the inauguration of new students and able to supervise department heads</p>
+            <p class="text-justify text-secondary">&emsp;  &ensp; in running events in the Geophysics Student Association. </p>
+            <p class="text-justify ml-auto text-secondary"><i class="fas fa-star"></i>&ensp;Time Management</p>
+            <p class="text-justify text-secondary">&emsp; - Able to handle the team's main project task on schedule, while simultaneously working on a side project</p>
+            <p class="text-justify text-secondary">&emsp;  &ensp; given by my project leader. </p>
+            <p class="text-justify ml-auto text-secondary"><i class="fas fa-star"></i>&ensp;Work Ethic</p>
+            <p class="text-justify text-secondary">&emsp; - Active in suggesting opinions and ideas at organizational meetings during college time </p>
+            <p class="text-justify text-secondary">&emsp;  &ensp;  and at progress meetings during my work as a research assistant</p>
+            <p class="text-justify ml-auto text-secondary"><i class="fas fa-star"></i>&ensp;Organization</p>
+            <p class="text-justify text-secondary">&emsp; - Vice executive of HIMA Geofisika PEDRA , 2016-2017</p>
+            <p class="text-justify text-secondary">&emsp; - Chief committee of JAMBORE (inauguration) Geofisika. 2016</p>
+            <p class="text-justify text-secondary">&emsp; - Staff of Human Resource Development Department of HIMA  Geofisika PEDRA, 2015-2016</p>
+          </society>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <div class="row">
+
+        <!-- Footer Location -->
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4 text-primary">Formal Backgrouds</h4>
+          <p class="lead mb-0">Bachelors of Geophysics (2019)
+            <br>Faculty of Mathematics and Natural Sciences
+            <br>University of Padjadjaran, Indonesia 
+            <br>(GPA 3.40/4.00)
+          </p>
+        </div>
+
+        <!-- Footer Social Icons -->
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4 text-primary">Websites</h4>
+          <a class="btn btn-outline-light btn-social mx-1" href="https:/www.linkedin.com/in/gheorf/">
+            <i class="fab fa-fw fa-linkedin-in"></i>
+          </a>
+          <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/gherafa">
+            <i class="fab fa-fw fa-github"></i>
+          </a>
+          <a class="btn btn-outline-light btn-social mx-1" href="https:/www.kaggle.com/gheorahmatfauzi/code">
+            <i class="fab fa-fw fa-kaggle"></i>
+          </a>
+          <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/gheorfauzi/">
+            <i class="fab fa-fw fa-instagram"></i>
+          </a>
+        </div>
+
+        <!-- Footer About Text -->
+        <div class="col-lg-4">
+          <h4 class="text-uppercase mb-4 text-primary">Contact Info</h4>
+          <p class="lead mb-0 "><i class="fab fa-whatsapp"></i> &ensp;: +6285794092030</p>
+          <p class="lead mb-0 "><i class="far fa-envelope"></i> &ensp;: fauzigheor@gmail.com</p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Copyright Section -->
+  <section class="copyright py-4 text-center text-white">
+    <div class="container">
+      <small>By: Gheo Rahmat Fauzi</small>
+    </div>
+  </section>
+
+  <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+  <div class="scroll-to-top d-lg-none position-fixed ">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+
+  <!-- Portfolio Modals -->
+
+  <!-- Portfolio Modal 1 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Log Cabin</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid rounded mb-5" src="/static/img/portfolio/cabin.png" alt="">
+                <!-- Portfolio Modal - Text -->
+                <p class="mb-5"></p>
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 2 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Gheo Rahmat Fauzi, S.Si</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid rounded mb-5" src="/static/img/portfolio/foto_std.jpg" alt="">
+                <!-- Portfolio Modal - Text -->
+                <p class="mb-5 text-justify">Hi my name is Gheo Rahmat Fauzi 
+                <br>I am an enthusiastic person that passionate in data science-related fields but also eager to learn something new and enjoy challenges. I am a responsible person that able to work effectively under pressure. An incredible team player but also good at working independently. </p>
+                
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-line"></div>
+                </div>  
+
+                <p class="mb-5 text-center text-uppercase">Contributions </p>
+                <p class="mb-5 text-justify"><i class="fas fa-star"></i>&ensp; Speaker in Workshop on Optimization and Simulation for Disaster Management. "An Introduction to Python". 26th-27th July 2021.</p>
+                <p class="mb-5 text-justify"><i class="fas fa-star"></i>&ensp; Computer Program for Location and Food Supply Network Mapping During Pandemic in West Java. (Intellectual Property Rights/IP). 2020 </p>
+                <p class="mb-5 text-justify"><i class="fas fa-star"></i>&ensp; Poster Presenter in International Workshop on Simulation Science. "Atomistic Simulation on Vibration Dynamics of Water Saturated Porous Silicate Material". Clausthal, 11th - 13th May 2019</p>
+                
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-line"></div>
+                </div>
+
+                <p class="mb-5 text-center text-uppercase">Competitions </p>
+                <p class="mb-5 text-justify"><i class="fas fa-star"></i>&ensp; Finalist of geophysical data processing competition in Indonesia Undergraduate Geophysical Competition ITB 2018.</p>
+                <p class="mb-5 text-justify"><i class="fas fa-star"></i>&ensp; 1st runner up in GRANITE TRISAKSI Paper Competition 2018. "Inconsistency Relationship between Total Electron Content (TEC) Precursor with Earthquake Magnitude and Depth". </p>
+                
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-line"></div>
+                </div>
+
+                <p class="mb-5 text-center text-uppercase">Publications </p>
+                <p class="mb-5 text-justify"><i class="fas fa-star"></i>&ensp; "Relief Food Supply Network Simulation", IEEE Press. 12 pp, 2021. (In Press). </p>
+                <p class="mb-5 text-justify"><i class="fas fa-star"></i>&ensp; "Vibration Frequency Spectrum of Water-Filled Porous Silica Investigated by Molecular Dynamics Simulation", Springer, 2020.</p>
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i> Close Window
+                </button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 3 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal3Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Circus Tent</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid rounded mb-5" src="/static/img/portfolio/circus.png" alt="">
+                <!-- Portfolio Modal - Text -->
+                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 4 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Controller</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid rounded mb-5" src="/static/img/portfolio/game.png" alt="">
+                <!-- Portfolio Modal - Text -->
+                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 5 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-labelledby="portfolioModal5Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Locked Safe</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid rounded mb-5" src="/static/img/portfolio/safe.png" alt="">
+                <!-- Portfolio Modal - Text -->
+                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 6 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-labelledby="portfolioModal6Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Submarine</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid rounded mb-5" src="/static/img/portfolio/submarine.png" alt="">
+                <!-- Portfolio Modal - Text -->
+                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/static/vendor/jquery/jquery.min.js"></script>
+  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Contact Form JavaScript -->
+  <script src="/static/vendor/js/jqBootstrapValidation.js"></script>
+  <script src="/static/vendor/js/contact_me.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="/static/vendor/js/freelancer.min.js"></script>
+
+</body>
+
+</html>

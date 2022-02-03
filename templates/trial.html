@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+ <about class = "container-fluid">
+  <div class="container d-flex align-items-center flex-column">
+  <h1 class="page-section-heading text-center text-uppercase text-primary mb-0">Test Page</h1>
+  <!-- Icon Divider -->
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+  <p>Halaman percobaan untuk mencoba menjalankan hasil simulasi dari python</p>
+  
+  <form method="POST" action="">
+    <div class="form-group">
+      <label> Input X </label>
+      <input type="number" name="x">
+    </div>
+    <div class="form-group">
+      <label> Input Y </label>
+      <input type="number" name="y">
+    </div>
+      <input class="btn btn-secondary" type="submit" value="submit">
+  </form>
+      
+      
+  
+  <!-- Icon Divider -->
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+  <div class="container d-flex align-items-center flex-column">
+    <a href="/trialpage/plot" class ="btn btn-warning btn lg">RANDOM PLOTTING</a>
+  </div>
+  </div>
+{% endblock %}
