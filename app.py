@@ -301,7 +301,10 @@ def login():
         else:
             error = 'Username not found'
             return render_template('login.html', error=error)
-            
+    
+    else:
+        return render_template('home2.html')
+    
     return render_template('login.html')
 
 # Check if user logged in
