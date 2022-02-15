@@ -24,7 +24,7 @@
 <body id="page-top">
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top text-center" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger text-primary" href="/">My Portfolio</a>
       <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,12 +32,14 @@
         <i class="fas fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/">Home</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/overview">Research Overview</a> <!-- CREATE A NEW ROUTES FOR RELIEF-OPS OVERVIEW -->
+        <ul class="navbar-nav ml-auto">
+          {% if session.logged_in %}
+           </li>
+           <li class="nav-item mx-0 mx-lg-1">
+           <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/dashboard">Dashboard</a>
+           </li>
+           <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/overview">Past Works</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/peta">Disaster Risk Map</a>
@@ -45,7 +47,27 @@
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/trialpage/plot">Disaster Information</a>
           </li>
-        </ul>
+           <li class="nav-item mx-0 mx-lg-1">
+           <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/logout">Logout</a>
+           </li>
+          {% else %}
+           <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/overview">Past Works</a>
+           </li>
+           <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/peta">Disaster Risk Map</a>
+            </li>
+           <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/trialpage/plot">Disaster Information</a>
+           </li>
+           <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/articles">Feedback</a>
+           </li>
+           <li class="nav-item mx-0 mx-lg-1">
+           <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/login">login</a>
+           </li>
+          {% endif %}
+          </ul>
       </div>
     </div>
   </nav>
@@ -251,14 +273,14 @@
   
   
   <!-- SKILLS Section -->
-  <section class="page-section bg-primary text-white mb-0" id="about">
+  <section class="page-section bg-white text-white mb-0" id="about">
     <div class="container">
 
       <!-- About Section Heading -->
       <h2 class="page-section-heading text-center text-uppercase text-secondary">Skills</h2>
 
       <!-- Icon Divider -->
-      <div class="divider-custom divider-light">
+      <div class="divider-custom divider-secondary">
         <div class="divider-custom-line"></div>
         <div class="divider-custom-line"></div>
         <div class="divider-custom-line"></div>
@@ -290,7 +312,7 @@
             <p class="text-justify ml-auto text-secondary"><i class="fas fa-star"></i>&ensp;Knowledge in using Surfer, MapInfo, QGIS, ARCGIS, and Microsoft Office (Excel, Word, PowerPoint).</p>
           </society>
           <!-- Icon Divider -->
-          <div class="divider-custom divider-light">
+          <div class="divider-custom divider-secondary">
             <div class="divider-custom-line"></div>
             <div class="divider-custom-line"></div>
             <div class="divider-custom-line"></div>
@@ -344,13 +366,13 @@
         <!-- Footer Social Icons -->
         <div class="col-lg-4 mb-5 mb-lg-0">
           <h4 class="text-uppercase mb-4 text-primary">Websites</h4>
-          <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/gheorf/">
+          <a class="btn btn-outline-light btn-social mx-1" href="https:/www.linkedin.com/in/gheorf/">
             <i class="fab fa-fw fa-linkedin-in"></i>
           </a>
           <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/gherafa">
             <i class="fab fa-fw fa-github"></i>
           </a>
-          <a class="btn btn-outline-light btn-social mx-1" href="https://www.kaggle.com/gheorahmatfauzi/code">
+          <a class="btn btn-outline-light btn-social mx-1" href="https:/www.kaggle.com/gheorahmatfauzi/code">
             <i class="fab fa-fw fa-kaggle"></i>
           </a>
           <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/gheorfauzi/">
@@ -451,7 +473,7 @@
                 <img class="img-fluid rounded mb-5" src="/static/img/portfolio/foto_std.jpg" alt="">
                 <!-- Portfolio Modal - Text -->
                 <p class="mb-5 text-justify">Hi my name is Gheo Rahmat Fauzi 
-                <br>I am an enthusiastic person that passionate in data science-related fields but also eager to learn something new and enjoy challenges. I am a responsible person that able to work effectively under pressure. An incredible team player but also good at working independently. </p>
+                <br>I am passionate in data science-related fields but also eager to learn something new and enjoy challenges. I am a responsible person that able to work effectively under pressure. An incredible team player but also good at working independently. </p>
                 
                 <!-- Icon Divider -->
                 <div class="divider-custom">

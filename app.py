@@ -16,12 +16,19 @@ from matplotlib.figure import Figure
 
 app = Flask(__name__)
 
-# config mysql connection
+# config mysql connection -LOCAL-
 
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = '123456'
-app.config['MYSQL_DB'] = 'myflaskapp'
+#app.config['MYSQL_HOST'] = 'localhost'
+#app.config['MYSQL_USER'] = 'root'
+#app.config['MYSQL_PASSWORD'] = '888999'
+#app.config['MYSQL_DB'] = 'myflaskapp'
+#app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
+
+# config mysql connection -HEROKU CLEARDB MYSQL FOR WEB-
+app.config['MYSQL_HOST'] = 'us-cdbr-east-05.cleardb.net'
+app.config['MYSQL_USER'] = 'b6080df764cd13'
+app.config['MYSQL_PASSWORD'] = '98a88023'
+app.config['MYSQL_DB'] = 'heroku_6a634f65adc2eaa'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
 # initialize mysql
@@ -36,20 +43,20 @@ def plotView():
     #length=10
     #randomnumber1 = random.sample(range(-20,20),length)
     #randomnumber2 = random.sample(range(10,50),length)
-    korban = pd.read_excel('korban.xlsx')
+    korban = pd.read_excel('korban.xlsx')              #Path filenya gaada
     fig = Figure()
     #plt.style.use('dark_background')
     axis = fig.add_subplot(1, 1, 1) 
-    axis.set_title("Kejadian Bencana di Jawa Barat")
-    axis.set_xlabel("Tahun")
-    axis.set_ylabel("Jumlah Kejadian")
+    axis.set_title("Disaster occurences in West Java")
+    axis.set_xlabel("Year")
+    axis.set_ylabel("Number of occurences")
     #axis.grid()
     #axis.bar(randomnumber1, randomnumber2)
     axis.bar(korban.Tahun, korban.Banjir)
     axis.bar(korban.Tahun, korban.TanahLongor)
     axis.bar(korban.Tahun, korban.GempaBumi)
     axis.bar(korban.Tahun, korban.GunungApi)
-    axis.legend(['Banjir', 'Longsor', 'Gempa', 'Gunung Api'])
+    axis.legend(['Flood', 'Landslide', 'Earthquake', 'Volcanic Eruption'])
     axis.set_xlim(2011,2019)
     
     # Convert plot to PNG image
@@ -68,9 +75,9 @@ def plotbanjir():
     korban = pd.read_excel('korban.xlsx')
     fig = Figure()
     axis = fig.add_subplot(1, 1, 1) 
-    axis.set_title("Kejadian Bencana Banjir di Jawa Barat")
-    axis.set_xlabel("Tahun")
-    axis.set_ylabel("Jumlah Kejadian")
+    axis.set_title("Flood occurences in West Java")
+    axis.set_xlabel("Year")
+    axis.set_ylabel("Number of Occurences")
     #axis.grid()
     axis.bar(korban.Tahun, korban.Banjir)
     axis.set_xlim(2011,2019)
@@ -91,9 +98,9 @@ def plotlongsor():
     korban = pd.read_excel('korban.xlsx')
     fig = Figure()
     axis = fig.add_subplot(1, 1, 1) 
-    axis.set_title("Kejadian Bencana Longsor di Jawa Barat")
-    axis.set_xlabel("Tahun")
-    axis.set_ylabel("Jumlah Kejadian")
+    axis.set_title("Lanslide occurences in West Java")
+    axis.set_xlabel("Year")
+    axis.set_ylabel("Number of Occurences")
     #axis.grid()
     axis.bar(korban.Tahun, korban.TanahLongor, color='orange')
     axis.set_xlim(2011,2019)
@@ -114,9 +121,9 @@ def plotgempa():
     korban = pd.read_excel('korban.xlsx')
     fig = Figure()
     axis = fig.add_subplot(1, 1, 1) 
-    axis.set_title("Kejadian Bencana Longsor di Jawa Barat")
-    axis.set_xlabel("Tahun")
-    axis.set_ylabel("Jumlah Kejadian")
+    axis.set_title("Earthquake occurences in West Java")
+    axis.set_xlabel("Year")
+    axis.set_ylabel("Number of Occurences")
     #axis.grid()
     axis.bar(korban.Tahun, korban.GempaBumi, color=['green'])
     axis.set_xlim(2011,2019)
@@ -137,9 +144,9 @@ def plotgunung():
     korban = pd.read_excel('korban.xlsx')
     fig = Figure()
     axis = fig.add_subplot(1, 1, 1) 
-    axis.set_title("Kejadian Bencana Letusan Gunung di Jawa Barat")
-    axis.set_xlabel("Tahun")
-    axis.set_ylabel("Jumlah Kejadian")
+    axis.set_title("Volcanic eruption occurences in West Java")
+    axis.set_xlabel("Year")
+    axis.set_ylabel("Number of Occurences")
     #axis.grid()
     axis.bar(korban.Tahun, korban.GunungApi, color=['red'])
     axis.set_xlim(2011,2019)
@@ -344,16 +351,18 @@ def dashboard():
 class ArticleForm(Form):
     title = StringField('Title', [validators.Length(min=1, max=200)])
     body = TextAreaField('Body', [validators.Length(min=30)])
+    author = StringField('Name', [validators.Length(min=1, max=200)])
 
 
 # Add Article
 @app.route('/add_article', methods=['GET', 'POST'])
-@is_logged_in
+#@is_logged_in
 def add_article():
     form = ArticleForm(request.form)
     if request.method == 'POST' and form.validate():
         title = form.title.data
         body = form.body.data
+        author = form.author.data
         
         
         # Create Cursor
@@ -361,7 +370,7 @@ def add_article():
         
         
         # Execute Cursor
-        cur.execute("INSERT INTO articles(title, body, author) VALUES(%s, %s, %s)",(title, body, session['username']))
+        cur.execute("INSERT INTO articles(title, body, author) VALUES(%s, %s, %s)",(title, body, author))
         
         
         # Commit to DB
@@ -372,7 +381,7 @@ def add_article():
         
         flash('Article Successfully Created', 'success')
         
-        return redirect(url_for('dashboard'))
+        return redirect(url_for('articles'))
 
     return render_template('add_article.html', form=form)
 
@@ -396,10 +405,12 @@ def edit_article(id):
     # Populate article form fields
     form.title.data = article['title']
     form.body.data = article['body']
+    form.author.data = article['author']
     
     if request.method == 'POST' and form.validate():
         title = request.form['title']
         body = request.form['body']
+        author = request.form['author']
         
         
         # Create Cursor
