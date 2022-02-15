@@ -292,7 +292,7 @@ def login():
                 
                 flash('You are now logged in', 'success')
                 #return redirect(url_for('dashboard'))
-                return redirect("/dashboard")
+                return render_template('home2.html')
             else:
                 error = 'Invalid Login'
                 return render_template('login.html', error=error)
@@ -301,9 +301,6 @@ def login():
         else:
             error = 'Username not found'
             return render_template('login.html', error=error)
-    
-    else:
-        return render_template('home2.html')
     
     return render_template('login.html')
 
