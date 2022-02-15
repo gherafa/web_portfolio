@@ -292,7 +292,7 @@ def login():
                 
                 flash('You are now logged in', 'success')
                 #return redirect(url_for('dashboard'))
-                return redirect("https://gheoportfolio.herokuapp.com/dashboard", code=302)
+                return redirect("/dashboard")
             else:
                 error = 'Invalid Login'
                 return render_template('login.html', error=error)
