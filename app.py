@@ -15,7 +15,7 @@ from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
 
 app = Flask(__name__)
-app.config["SERVER_NAME"] = "gheoportfolio.herokuapp.com:443"
+#app.config["SERVER_NAME"] = "gheoportfolio.herokuapp.com:443"
 
 # config mysql connection -LOCAL-
 
@@ -503,5 +503,5 @@ def petabulog():
 
 if __name__ == '__main__':
     app.secret_key='secret123'
-    app.run(debug = True)
-    #app.run(host='gheoportfolio', port=443,debug = True)
+    #app.run(debug = True)
+    app.run(host='gheoportfolio.herokuapp.com', port=443,debug = True)
