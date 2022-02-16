@@ -15,6 +15,7 @@ from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
 
 app = Flask(__name__)
+app.config["SERVER_NAME"] = "gheoportfolio.herokuapp.com"
 
 # config mysql connection -LOCAL-
 
@@ -291,8 +292,8 @@ def login():
                 session['username'] = username
                 
                 flash('You are now logged in', 'success')
-                #return redirect(url_for('dashboard'))
-                return redirect("https://gheoportfolio.herokuapp.com/", code=302)
+                return redirect(url_for('dashboard'))
+                #return redirect("https://gheoportfolio.herokuapp.com/", code=302)
             else:
                 error = 'Invalid Login'
                 return render_template('login.html', error=error)
