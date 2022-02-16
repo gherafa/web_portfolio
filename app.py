@@ -15,7 +15,7 @@ from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
 
 app = Flask(__name__)
-app.config["SERVER_NAME"] = "gheoportfolio.herokuapp.com"
+app.config["SERVER_NAME"] = "https://gheoportfolio.herokuapp.com/"
 
 # config mysql connection -LOCAL-
 
