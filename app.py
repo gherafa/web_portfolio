@@ -15,7 +15,7 @@ from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
 
 app = Flask(__name__)
-#app.config["SERVER_NAME"] = "https://gheoportfolio.herokuapp.com/"
+app.config["SERVER_NAME"] = "gheoportfolio.herokuapp.com"
 
 # config mysql connection -LOCAL-
 
@@ -504,21 +504,3 @@ def petabulog():
 if __name__ == '__main__':
     app.secret_key='secret123'
     app.run(debug = True)
-else:
-# production mode - replace all URLs
-app.config["SERVER_NAME"] = "gheoportfolio.herokuapp.com"
-
-def replace_hostname(m, hostname):
-    if type(m) == dict:
-        for key in m.keys():
-            m[key] = replace_hostname(m[key], hostname)
-    elif type(m) == list:
-        for n in range(len(m)):
-            m[n] = replace_hostname(m[n], hostname)
-    elif type(m) == unicode:
-        m = m.replace("127.0.0.1:5000", hostname)
-    return m
-
-model = replace_hostname(model, app.config["SERVER_NAME"])
-
-print(app.config)
