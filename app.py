@@ -290,8 +290,8 @@ def login():
                 session['logged_in'] = True
                 session['username'] = username
                 
-                #flash('You are now logged in', 'success')
-                return redirect(url_for('dashboard'))
+                flash('You are now logged in', 'success')
+                #return redirect(url_for('dashboard'))
                 #return redirect('/dashboard')
                 #return render_template('https://gheoportfolio.herokuapp.com/dashboard')
                 #return render_template('/')
